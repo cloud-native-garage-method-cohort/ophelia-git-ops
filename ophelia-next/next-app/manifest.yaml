@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    app.openshift.io/vcs-ref: c0f6a827e4b118ee5ecf238ccd328c0eb9da1135
+    app.openshift.io/vcs-ref: 2b545a4bf26991bd07fa8e04494bd17e4d0c60d4
     app.openshift.io/vcs-uri: https://github.com/cloud-native-garage-method-cohort/ophelia-end-to-end.git
   labels:
     app.kubernetes.io/instance: next-app
@@ -24,7 +24,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.openshift.io/vcs-ref: c0f6a827e4b118ee5ecf238ccd328c0eb9da1135
+    app.openshift.io/vcs-ref: 2b545a4bf26991bd07fa8e04494bd17e4d0c60d4
     app.openshift.io/vcs-uri: https://github.com/cloud-native-garage-method-cohort/ophelia-end-to-end.git
   labels:
     app.kubernetes.io/instance: next-app
@@ -41,7 +41,7 @@ spec:
   template:
     metadata:
       annotations:
-        app.openshift.io/vcs-ref: c0f6a827e4b118ee5ecf238ccd328c0eb9da1135
+        app.openshift.io/vcs-ref: 2b545a4bf26991bd07fa8e04494bd17e4d0c60d4
         app.openshift.io/vcs-uri: https://github.com/cloud-native-garage-method-cohort/ophelia-end-to-end.git
       labels:
         app.kubernetes.io/instance: next-app
@@ -53,7 +53,7 @@ spec:
         - name: PROTOCOLS
         - name: LOG_LEVEL
           value: debug
-        image: quay.io/ophelia_huang/next-app:c0f6a827e4b118ee5ecf238ccd328c0eb9da1135
+        image: quay.io/ophelia_huang/next-app:2b545a4bf26991bd07fa8e04494bd17e4d0c60d4
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -91,7 +91,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   annotations:
-    app.openshift.io/vcs-ref: c0f6a827e4b118ee5ecf238ccd328c0eb9da1135
+    app.openshift.io/vcs-ref: 2b545a4bf26991bd07fa8e04494bd17e4d0c60d4
     app.openshift.io/vcs-uri: https://github.com/cloud-native-garage-method-cohort/ophelia-end-to-end.git
   labels:
     app.kubernetes.io/instance: next-app
